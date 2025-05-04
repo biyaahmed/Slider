@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Slick Slider - 2 Items with Spacing</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Slick CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      height: 100vh;
+      
+    }
+
+    .slider-container {
+      width: 100%;
+      padding: 0 20px;
+      /* space on left and right */
+      box-sizing: border-box;
+      background-color: rgb(163, 136, 136);
+      /* background-color: rgb(184, 145, 221); */
+      height: 100vh;
+    }
+
+    .slider .slide-item {
+      background-color: #f0f0f0;
+      border: 1px solid #ccc;
+      padding: 20px; 
+      text-align: left;
+      font-size: 24px;
+      height: auto;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      margin: 0 10px;
+      /* space between items */
+      box-sizing: border-box;
+      border-radius: 40px;
+    }
+
+    /* remove default slick padding */
+    .slick-slide {
+      display: flex;
+      justify-content: center;
+    }
+
+    .slick-list {
+      margin: 0 -10px;
+      /* negative margin to balance the slide-item margin */
+    }
+
+    .main-slide {
+      display: flex;
+      justify-content: space-between;
+      color: #ffffff;
+    }
+
+    .slide-item-content {
+      background-image: url("https://img.freepik.com/free-photo/vertical-shot-river-surrounded-by-mountains-meadows-scotland_181624-27881.jpg?uid=R161649337&ga=GA1.1.1972498866.1717075333&semt=ais_hybrid&w=740");
+      border-radius: 40px;
+      padding: 50px 25px;
+
+    }
+
+    .inner-item {
+      width: auto;
+      height: 80%;
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+    }
+
+    .item-1 {
+      width: 54%;
+    }
+
+    .item-2 {
+      width: 44%;
+    }
+
+    .inner-item2 {
+      background-image: url("https://img.freepik.com/free-photo/tired-woman-raises-two-dumbbells-works-biceps-determined-unshaven-man-carries-karemat-gymnastic-training_273609-33458.jpg?uid=R161649337&ga=GA1.1.1972498866.1717075333&semt=ais_hybrid&w=740");
+      vertical-align: middle;
+      height: 30%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .inner-item-3 {
+      background-image: url("https://img.freepik.com/free-photo/chicken-skewers-with-slices-sweet-peppers-dill_2829-18809.jpg?uid=R161649337&ga=GA1.1.1972498866.1717075333&semt=ais_hybrid&w=740");
+      vertical-align: middle;
+      height: 30%;
+      display: flex;
+      flex-direction: column;
+    }
+    .slide-item-content h2{
+      font-size: 22px;
+      font-family: poppins;
+    }
+    .slide-item-content p{
+      font-size: 17px;
+      font-family: poppins;
+    }
+    .slider-btn{
+      box-sizing: border-box;
+      border: none;
+      padding: 15px 25px;
+      font-size: 17px;
+      font-family: poppins;
+      cursor: pointer;
+      background-color: darkgreen;
+      color: #ffffff;
+      border-radius: 40px;
+    }
+
+
+    /* @media (max-width: 1024px) {
+  .main-slide {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .item-1, .item-2 {
+    width: 100%;
+  }
+
+  .inner-item,
+  .inner-item2,
+  .inner-item-3 {
+    height: auto;
+    padding: 30px 20px;
+  }
+
+  .inner-item2, .inner-item-3 {
+    margin-top: 20px !important;
+  }
+
+  .slide-item-content h2 {
+    font-size: 20px;
+  }
+
+  .slide-item-content p {
+    font-size: 16px;
+  }
+
+  .slider-btn {
+    font-size: 16px;
+    padding: 12px 20px;
+  }
+} */
+@media (max-width: 768px) {
+.main-slide{
+display: block;
+}
+.item-1 {
+    width: 100%;
+}
+.item-2 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+.inner-item-3{
+  margin-top: 0px !important;
+}
+  .slider-container {
+    padding: 0 10px;
+  }
+
+  .slide-item-content {
+    padding: 25px 15px;
+  }
+
+  .slider-btn {
+    font-size: 14px;
+    padding: 10px 18px;
+  }
+} 
+@media (max-width: 600px){
+  .item-2 {
+    width: 100%;
+    display: block;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+.inner-item-3{
+  margin-top: 20px !important;
+}
+}
+a{
+  text-decoration: none;
+}
+  </style>
+</head>
+
+<body>
+
+  <div class="slider-container">
+    <div class="slider">
+      <div class="slide-item">
+        <div class="main-slide">
+          <div class="slider-item item-1">
+            <div class="slide-item-content inner-item">
+              <h2>Nature</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+             <a href="#"><button class="slider-btn">Learn More</button></a>
+            </div>
+          </div>
+          <div class="slider-item item-2">
+            <div class="slide-item-content inner-item2">
+              <h2>Fitness</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <a href="#"><button class="slider-btn">Learn More</button></a>
+            </div>
+            <div class="slide-item-content inner-item-3" style="margin-top: 20px;">
+              <h2>Food</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <a href="#"><button class="slider-btn">Learn More</button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slide-item">
+        <div class="main-slide">
+          <div class="slider-item item-1">
+            <div class="slide-item-content inner-item">
+              <h2>Nature</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <a href="#"><button class="slider-btn">Learn More</button></a>
+            </div>
+          </div>
+          <div class="slider-item item-2">
+            <div class="slide-item-content inner-item2">
+              <h2>Fitness</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <a href="#"><button class="slider-btn">Learn More</button></a>
+            </div>
+            <div class="slide-item-content inner-item-3" style="margin-top: 20px;">
+              <h2>Food</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <a href="#"><button class="slider-btn">Learn More</button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slide-item">
+        <div class="main-slide">
+          <div class="slider-item item-1">
+            <div class="slide-item-content inner-item">
+              <h2>Nature</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <a href="#"><button class="slider-btn">Learn More</button></a>
+            </div>
+          </div>
+          <div class="slider-item item-2">
+            <div class="slide-item-content inner-item2">
+              <h2>Fitness</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <a href="#"><button class="slider-btn">Learn More</button></a>
+            </div>
+            <div class="slide-item-content inner-item-3" style="margin-top: 20px;">
+              <h2>Food</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <a href="#"><button class="slider-btn">Learn More</button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slide-item">
+        <div class="main-slide">
+          <div class="slider-item item-1">
+            <div class="slide-item-content inner-item">
+              <h2>Nature</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <a href="#"><button class="slider-btn">Learn More</button></a>
+            </div>
+          </div>
+          <div class="slider-item item-2">
+            <div class="slide-item-content inner-item2">
+              <h2>Fitness</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <a href="#"><button class="slider-btn">Learn More</button></a>
+            </div>
+            <div class="slide-item-content inner-item-3" style="margin-top: 20px;">
+              <h2>Food</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <a href="#"><button class="slider-btn">Learn More</button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slide-item">
+        <div class="main-slide">
+          <div class="slider-item item-1">
+            <div class="slide-item-content inner-item">
+              <h2>Nature</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <a href="#"><button class="slider-btn">Learn More</button></a>
+            </div>
+          </div>
+          <div class="slider-item item-2">
+            <div class="slide-item-content inner-item2">
+              <h2>Fitness</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <a href="#"><button class="slider-btn">Learn More</button></a>
+            </div>
+            <div class="slide-item-content inner-item-3" style="margin-top: 20px;">
+              <h2>Food</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <a href="#"><button class="slider-btn">Learn More</button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Slick JS -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+  <!-- <script>
+    $(document).ready(function () {
+      $('.slider').slick({
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        autoplay: false,
+        autoplaySpeed: 2000,
+        arrows: false,
+        dots: false,
+        infinite: true,
+        pauseOnHover: false,
+        pauseOnFocus: false
+      });
+    });
+  </script> -->
+
+  <script>
+    $(document).ready(function () {
+      $('.slider').slick({
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        autoplay: false,
+        autoplaySpeed: 2000,
+        arrows: false,
+        dots: false,
+        infinite: true,
+        pauseOnHover: false,
+        pauseOnFocus: false,
+        responsive: [
+          {
+            breakpoint: 1024, // For tablets and below
+            settings: {
+              slidesToShow: 1
+            }
+          },
+          {
+            breakpoint: 600, // For mobile devices
+            settings: {
+              slidesToShow: 1
+            }
+          }
+        ]
+      });
+    });
+  </script>
+  
+</body>
+
+</html>
