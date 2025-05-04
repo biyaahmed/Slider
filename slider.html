@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    <style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+    }
+
+    .reviews-wrapper {
+        
+        overflow: hidden;
+    }
+
+    .reviews-header {
+        text-align: center;
+    }
+
+    .reviews-count {
+        font-size: 5.5rem;
+        color: #221e1d;
+        -webkit-text-stroke: 2px #fff;
+        margin: 20px 0 0;
+        font-style: italic;
+    }
+
+    .reviews-heading {
+        color: #fff;
+        font-style: italic;
+        font-size: 4.2rem;
+        margin: 0px 0 40px;
+        text-transform: uppercase;
+    }
+
+    .review-stars {
+        margin-bottom: 80px
+    }
+
+    .review-stars .stars {
+        position: relative;
+        display: inline-block;
+        white-space: nowrap;
+        width: 138px;
+        padding: 0 4px 0 0;
+        margin-left: auto;
+        margin-right: auto;
+        vertical-align: baseline;
+    }
+
+    .review-stars .cover {
+        background: #000;
+        height: 100%;
+        overflow: hidden;
+        mix-blend-mode: color;
+        position: absolute;
+        top: 0;
+        right: 2px;
+    }
+
+    .review-stars svg {
+        width: 25px;
+        display: inline-block;
+        margin-left: 0;
+        fill: #fbc228;
+    }
+
+    .review-stars span {
+        font-weight: 700;
+        font-size: 1.8rem;
+        color: #fff;
+        margin-left: 10px;
+    }
+
+    .reviews-list {
+        margin: 0;
+        padding: 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+        align-items: stretch;
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+        min-width: 100%;
+        -webkit-animation: scroll-horizontal 40s linear infinite;
+        animation: scroll-horizontal 40s linear infinite;
+        list-style: none;
+    }
+
+    .reviews-list.reverse {
+        animation-direction: reverse;
+    }
+
+    .review-item {
+        -webkit-box-flex: 2;
+        -ms-flex-positive: 2;
+        flex-grow: 2;
+        -ms-flex-negative: 0;
+        flex-shrink: 0;
+        -ms-flex-preferred-size: 240px;
+        flex-basis: 500px;
+        position: relative;
+        width: 240px;
+        display: inline-block;
+        font-size: .6rem;
+        
+        border-radius: 3px;
+        
+    }
+
+    .review-img img {
+        width: 100%;
+        display: block;
+        height: auto;
+    }
+
+    @keyframes scroll-horizontal {
+        0% {
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+        }
+
+        100% {
+            -webkit-transform: translateX(calc(-100% - 2rem));
+            transform: translateX(calc(-100% - 2rem));
+        }
+    }
+
+    @media (max-width: 768px) {
+        .reviews-count {
+            font-size: 48px;
+        }
+
+        .reviews-heading {
+            font-size: 36px;
+        }
+
+        .review-stars {
+            margin-bottom: 40px;
+        }
+
+        .review-stars .stars {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .review-item {
+            -webkit-box-flex: 2;
+            -ms-flex-positive: 2;
+            flex-grow: 2;
+            -ms-flex-negative: 0;
+            flex-shrink: 0;
+            -ms-flex-preferred-size: 240px;
+            flex-basis: 240px;
+            position: relative;
+            width: 240px;
+            margin: 5px;
+            min-height: auto;
+        }
+    }
+</style>
+</style>
+<body>
+    <div class="reviews-wrapper">
+        <div class="reviews-inner">
+            <div class="reviews-container">
+                <ul class="reviews-list">
+                    <li class="review-item">
+                        <div class="review-img">
+                            <img src="https://storage.googleapis.com/msgsndr/HFDvEw1xfJsX1SgjGBCN/media/68013ff851be4a10151207f2.svg">
+                        </div>
+                    </li>
+                    <li class="review-item">
+                        <div class="review-img">
+                            <img src="https://storage.googleapis.com/msgsndr/HFDvEw1xfJsX1SgjGBCN/media/68013ff8641b0497ebb46612.svg">
+                        </div>
+                    </li>
+                    <li class="review-item">
+                        <div class="review-img">
+                            <img src="https://storage.googleapis.com/msgsndr/HFDvEw1xfJsX1SgjGBCN/media/68013ff98970b0ebeeefd451.svg">
+                        </div>
+                    </li>
+                    <li class="review-item">
+                        <div class="review-img">
+                            <img src="https://storage.googleapis.com/msgsndr/HFDvEw1xfJsX1SgjGBCN/media/68013ff88970b0231eefd450.svg">
+                        </div>
+                    </li>
+                    <li class="review-item">
+                        <div class="review-img">
+                            <img src="https://storage.googleapis.com/msgsndr/HFDvEw1xfJsX1SgjGBCN/media/68013ff9641b04e5d6b46613.svg">
+                        </div>
+                    </li>
+                    <li class="review-item">
+                        <div class="review-img">
+                            <img src="https://storage.googleapis.com/msgsndr/HFDvEw1xfJsX1SgjGBCN/media/68013ff92ba58273256dcd74.svg">
+                        </div>
+                    </li>
+                    <li class="review-item">
+                        <div class="review-img">
+                            <img src="https://storage.googleapis.com/msgsndr/HFDvEw1xfJsX1SgjGBCN/media/68013ff817a68688a61d76c0.svg">
+                        </div>
+                    </li>
+                    <li class="review-item">
+                        <div class="review-img">
+                            <img src="https://storage.googleapis.com/msgsndr/HFDvEw1xfJsX1SgjGBCN/media/68013ff910c9dec5c20aef36.svg">
+                        </div>
+                    </li>
+                    <li class="review-item">
+                        <div class="review-img">
+                            <img src="https://storage.googleapis.com/msgsndr/HFDvEw1xfJsX1SgjGBCN/media/68013ff817a686db051d76c1.svg">
+                        </div>
+                    </li>
+                    <li class="review-item">
+                        <div class="review-img">
+                            <img src="https://storage.googleapis.com/msgsndr/HFDvEw1xfJsX1SgjGBCN/media/68013ff92ba582ed686dcd55.svg">
+                        </div>
+                    </li>
+                </ul>
+                <ul class="reviews-list reverse">
+                    <li class="review-item">
+                        <div class="review-img">
+                            <img src="https://storage.googleapis.com/msgsndr/HFDvEw1xfJsX1SgjGBCN/media/68013ff851be4a10151207f2.svg">
+                        </div>
+                    </li>
+                    <li class="review-item">
+                        <div class="review-img">
+                            <img src="https://storage.googleapis.com/msgsndr/HFDvEw1xfJsX1SgjGBCN/media/68013ff8641b0497ebb46612.svg">
+                        </div>
+                    </li>
+                    <li class="review-item">
+                        <div class="review-img">
+                            <img src="https://storage.googleapis.com/msgsndr/HFDvEw1xfJsX1SgjGBCN/media/68013ff98970b0ebeeefd451.svg">
+                        </div>
+                    </li>
+                    <li class="review-item">
+                        <div class="review-img">
+                            <img src="https://storage.googleapis.com/msgsndr/HFDvEw1xfJsX1SgjGBCN/media/68013ff88970b0231eefd450.svg">
+                        </div>
+                    </li>
+                    <li class="review-item">
+                        <div class="review-img">
+                            <img src="https://storage.googleapis.com/msgsndr/HFDvEw1xfJsX1SgjGBCN/media/68013ff9641b04e5d6b46613.svg">
+                        </div>
+                    </li>
+                    <li class="review-item">
+                        <div class="review-img">
+                            <img src="https://storage.googleapis.com/msgsndr/HFDvEw1xfJsX1SgjGBCN/media/68013ff92ba58273256dcd74.svg">
+                        </div>
+                    </li>
+                    <li class="review-item">
+                        <div class="review-img">
+                            <img src="https://storage.googleapis.com/msgsndr/HFDvEw1xfJsX1SgjGBCN/media/68013ff817a68688a61d76c0.svg">
+                        </div>
+                    </li>
+                    <li class="review-item">
+                        <div class="review-img">
+                            <img src="https://storage.googleapis.com/msgsndr/HFDvEw1xfJsX1SgjGBCN/media/68013ff910c9dec5c20aef36.svg">
+                        </div>
+                    </li>
+                    <li class="review-item">
+                        <div class="review-img">
+                            <img src="https://storage.googleapis.com/msgsndr/HFDvEw1xfJsX1SgjGBCN/media/68013ff817a686db051d76c1.svg">
+                        </div>
+                    </li>
+                    <li class="review-item">
+                        <div class="review-img">
+                            <img src="https://storage.googleapis.com/msgsndr/HFDvEw1xfJsX1SgjGBCN/media/68013ff92ba582ed686dcd55.svg">
+                        </div>
+                    </li>
+                </ul>
+                <ul class="reviews-list">
+                    <li class="review-item">
+                        <div class="review-img">
+                            <img src="https://storage.googleapis.com/msgsndr/HFDvEw1xfJsX1SgjGBCN/media/68013ff851be4a10151207f2.svg">
+                        </div>
+                    </li>
+                    <li class="review-item">
+                        <div class="review-img">
+                            <img src="https://storage.googleapis.com/msgsndr/HFDvEw1xfJsX1SgjGBCN/media/68013ff8641b0497ebb46612.svg">
+                        </div>
+                    </li>
+                    <li class="review-item">
+                        <div class="review-img">
+                            <img src="https://storage.googleapis.com/msgsndr/HFDvEw1xfJsX1SgjGBCN/media/68013ff98970b0ebeeefd451.svg">
+                        </div>
+                    </li>
+                    <li class="review-item">
+                        <div class="review-img">
+                            <img src="https://storage.googleapis.com/msgsndr/HFDvEw1xfJsX1SgjGBCN/media/68013ff88970b0231eefd450.svg">
+                        </div>
+                    </li>
+                    <li class="review-item">
+                        <div class="review-img">
+                            <img src="https://storage.googleapis.com/msgsndr/HFDvEw1xfJsX1SgjGBCN/media/68013ff9641b04e5d6b46613.svg">
+                        </div>
+                    </li>
+                    <li class="review-item">
+                        <div class="review-img">
+                            <img src="https://storage.googleapis.com/msgsndr/HFDvEw1xfJsX1SgjGBCN/media/68013ff92ba58273256dcd74.svg">
+                        </div>
+                    </li>
+                    <li class="review-item">
+                        <div class="review-img">
+                            <img src="https://storage.googleapis.com/msgsndr/HFDvEw1xfJsX1SgjGBCN/media/68013ff817a68688a61d76c0.svg">
+                        </div>
+                    </li>
+                    <li class="review-item">
+                        <div class="review-img">
+                            <img src="https://storage.googleapis.com/msgsndr/HFDvEw1xfJsX1SgjGBCN/media/68013ff910c9dec5c20aef36.svg">
+                        </div>
+                    </li>
+                    <li class="review-item">
+                        <div class="review-img">
+                            <img src="https://storage.googleapis.com/msgsndr/HFDvEw1xfJsX1SgjGBCN/media/68013ff817a686db051d76c1.svg">
+                        </div>
+                    </li>
+                    <li class="review-item">
+                        <div class="review-img">
+                            <img src="https://storage.googleapis.com/msgsndr/HFDvEw1xfJsX1SgjGBCN/media/68013ff92ba582ed686dcd55.svg">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
